@@ -17,46 +17,68 @@
 					<div class="p-field">
 						<label for="name">Nome</label>
 						<p:inputText id="name" type="text"
-							value="#{visitanteBean.visitante.name}">
-
+							value="#{visitanteBean.visitante.name}"
+							required="true"
+							requiredMessage="O campo nome é obrigatório"
+						>
+							<f:ajax event="blur" render="msg" />
 						</p:inputText>
 					</div>
 
 					<div class="p-field">
 						<label for="nascimento">Data de nascimento</label>
 						<p:datePicker value="#{visitanteBean.visitante.nascimento}"
-							id="nascimento" yearNavigator="true" />
+							id="nascimento" yearNavigator="true"
+							required="true"
+							requiredMessage="O campo data de nascimento é obrigatório"
+						>
+							<f:ajax event="blur" render="msg" />
+						</p:datePicker>
 
 					</div>
 
 					<div class="p-field">
 						<label for="cpf">CPF</label>
 						<p:inputText id="cpf" type="number"
-							value="#{visitanteBean.visitante.cpf}">
-
+							value="#{visitanteBean.visitante.cpf}"
+							required="true"
+							requiredMessage="O campo CPF é obrigatório"
+						>
+							<f:ajax event="blur" render="msg" />
 						</p:inputText>
 					</div>
 
 					<div class="p-field">
 						<label for="rg">RG</label>
 						<p:inputText id="rg" type="number"
-							value="#{visitanteBean.visitante.rg}">
-
+							value="#{visitanteBean.visitante.rg}"
+							required="true"
+							requiredMessage="O campo RG é obrigatório"
+						>
+							<f:ajax event="blur" render="msg" />
 						</p:inputText>
 					</div>
 
 					<div class="p-field">
 						<label for="digitoRG">Digito RG</label>
 						<p:inputText id="digitoRG" type="number"
-							value="#{visitanteBean.visitante.digitoRG}">
-
+							value="#{visitanteBean.visitante.digitoRG}"
+							required="true"
+							requiredMessage="O campo digito RG é obrigatório"
+						>
+							<f:ajax event="blur" render="msg" />
 						</p:inputText>
 					</div>
 
 					<div class="p-field">
 						<label for="cadastro">Data de cadastro</label>
 						<p:datePicker value="#{visitanteBean.visitante.cadastro}"
-							id="cadastro" yearNavigator="true" />
+							id="cadastro" yearNavigator="true"
+							required="true"
+							requiredMessage="O campo data de nascimento é obrigatório"
+						>
+							<f:ajax event="blur" render="msg" />
+						</p:datePicker>
 
 					</div>
 					
@@ -65,7 +87,11 @@
 					<div class="p-field">
 						<label for="image">Image File: </label>
 						<p:fileUpload value="#{visitanteBean.image}" mode="simple"
-							skinSimple="true" id="image" />
+							skinSimple="true" id="image"
+							required="true"
+							requiredMessage="A imagem é obrigatório"
+						>
+						</p:fileUpload>
 					</div>
 
 				</div>
